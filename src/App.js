@@ -1,10 +1,10 @@
-import "./styles/global.scss"
+import { Routes } from "./Routes";
+
+import "./styles/global.scss";
 
 function App() {
   return (
-    <div>
-      <h1>Player 2</h1>
-    </div>
+    <Routes />
   );
 }
 
