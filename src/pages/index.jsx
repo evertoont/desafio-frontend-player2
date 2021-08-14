@@ -1,3 +1,4 @@
-import {Home} from "./Home";
+import { Home } from "./Home";
+import { ListBanks } from "./ListBanks";
 
-export { Home };
+export { Home, ListBanks };
