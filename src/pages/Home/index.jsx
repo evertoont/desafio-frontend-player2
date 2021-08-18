@@ -1,7 +1,6 @@
 import { useHistory } from "react-router-dom";
 
-import logo from "../../assets/logo.svg";
-import image_aside from "../../assets/image_aside.svg";
+import { Logo, Image_aside } from "../../assets";
 import { Input, Button } from "../../components";
 
 import "./style.scss";
@@ -19,14 +18,14 @@ export function Home() {
     <div className="home_page">
       <main className="home_login">
         <div className="container_login">
-          <img className="home_logo" src={logo} alt="logo" />
+          <img className="home_logo" src={Logo} alt="logo" />
           <p className="login_slogan">
             Dispare mensagens quando e para quem você quiser.
           </p>
 
-          <form className="home_form">
+          <form className="home_form" onSubmit={handleBanksPage}>
             <Input
-              type="text"
+              type="email"
               placeholder="Digite seu e-mail"
               label="E-mail"
               id="email"
@@ -39,9 +38,7 @@ export function Home() {
               name="senha"
               id="password"
             />
-            <Button type="submit" onclick={handleBanksPage}>
-              Entrar
-            </Button>
+            <Button type="submit">Entrar</Button>
 
             <span>
               Não tem uma conta? <strong>Cadastre-se</strong>
@@ -55,7 +52,7 @@ export function Home() {
       <aside className="home_aside">
         <img
           className="aside_image"
-          src={image_aside}
+          src={Image_aside}
           alt="homem no computador"
         />
         <div className="aside_text">
