@@ -17,6 +17,19 @@ export const getDataBank = async () => {
     });
 
     return dataBanks
+
+  } catch (error) {
+    console.log(error.message)
+  }
+}
+
+export const getInfoBank = async (code) => {
+  
+  try {
+    const {data} = await api.get(code)
+
+    return data
+
   } catch (error) {
     console.log(error.message)
   }

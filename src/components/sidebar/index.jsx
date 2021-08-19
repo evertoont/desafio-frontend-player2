@@ -30,7 +30,10 @@ export function Sidebar() {
       </div>
 
       <div className="sidebar_item">
-        <div className="sidebar_primary_item">
+        <div
+          className="sidebar_primary_item"
+          onClick={() => history.push("/banks")}
+        >
           <Home />
           <p>Inicio</p>
         </div>

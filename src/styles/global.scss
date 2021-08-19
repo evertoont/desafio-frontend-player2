@@ -5,12 +5,12 @@
   padding: 0;
   outline: 0;
   box-sizing: border-box;
-  font-family: "Red Hat Display", sans-serif;
 }
 
 body {
   background: #FFF;
   color: #474f63;
+  font-family: 'Red Hat Display', sans-serif;
 }
 
 a {
@@ -19,4 +19,19 @@ a {
 
 button {
   cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #E4E7EC;
+  border-radius: 5px;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  background: #E4E7EC; 
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: #0EC3A3;
+  width: 8px;
+  border-radius: 5px;
 }

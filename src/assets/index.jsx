@@ -12,6 +12,7 @@ import { ReactComponent as Notifications } from "./Notifications.svg";
 import { ReactComponent as Search } from "./Search.svg";
 import { ReactComponent as CheckCard } from "./CheckCard.svg";
 import { ReactComponent as DotsCard } from "./DotsCard.svg";
+import { ReactComponent as Pencil } from "./Pencil.svg";
 
 export {
   Home,
@@ -27,5 +28,6 @@ export {
   ArrowLeft,
   Search,
   CheckCard,
-  DotsCard
+  DotsCard,
+  Pencil
 };

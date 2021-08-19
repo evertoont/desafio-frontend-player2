@@ -1,4 +1,4 @@
-import style from "./style.scss"
+import "./style.scss"
 
 export function Loading() {
     return(

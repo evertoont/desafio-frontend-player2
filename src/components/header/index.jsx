@@ -5,7 +5,7 @@ import "./style.scss";
 import { useHistory } from "react-router-dom";
 
 export function Header(props) {
-  const { title, contentButton, showArrow = false } = props;
+  const { title, contentButton, buttonImage, showArrow = false } = props;
 
   const history = useHistory();
 
@@ -19,7 +19,7 @@ export function Header(props) {
 
       <h3 className="header_title">{title}</h3>
 
-      <Button>{contentButton}</Button>
+      <Button image={buttonImage}>{contentButton}</Button>
       <Notifications className="header_notifications" />
       <p className="header_info">
         Olá, <strong>Beleza Rara</strong>
