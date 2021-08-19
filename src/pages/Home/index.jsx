@@ -30,6 +30,7 @@ export function Home() {
               label="E-mail"
               id="email"
               name="email"
+              required={true}
             />
             <Input
               type="password"
@@ -37,6 +38,7 @@ export function Home() {
               label="Senha"
               name="senha"
               id="password"
+              required={true}
             />
             <Button type="submit">Entrar</Button>
 

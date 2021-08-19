@@ -1,14 +1,46 @@
 .container_banks {
   display: flex;
-  background-color: #F7F7F8;
+  background-color: #f7f7f8;
   min-height: 100vh;
 
   .content_banks {
     display: flex;
     flex-direction: column;
     margin-left: 2.8rem;
-    background-color: #F7F7F8;
+    background-color: #f7f7f8;
     padding: 0 20px;
     width: 100%;
+
+    .banks_list-header {
+      display: flex;
+      justify-content: space-between;
+      margin: 25px 68px 12px 0;
+
+      .bank_list-amount {
+        display: flex;
+        align-items: center;
+
+        > h4 {
+          margin-right: 0.75rem;
+          font-size: 1.12rem;
+        }
+
+        > span {
+          color: #b3b9c9;
+          font-size: 0.87rem;
+        }
+      }
+
+      .input_container {
+        width: auto;
+        min-width: 280px;
+        
+        .bank_list-input {
+          margin-left: auto;
+          position: relative;
+          margin-right: 30px;
+        }
+      }
+    }
   }
 }

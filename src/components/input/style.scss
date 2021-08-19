@@ -1,7 +1,15 @@
-.input_container{
+.input_container {
   display: flex;
   flex-direction: column;
   width: 100%;
+  position: relative;
+
+  .search {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+  }
 }
 
 .label {
@@ -21,12 +29,12 @@
   columns: #b3b9c9;
   font-size: 0.87rem;
 
-  &:focus{
-    border: 1px solid #0EC3A3;
+  &:focus {
+    border: 1px solid #0ec3a3;
   }
 
   &:hover {
-    border: 1px solid #5BE3B0;
+    border: 1px solid #5be3b0;
   }
 
   ::placeholder {
