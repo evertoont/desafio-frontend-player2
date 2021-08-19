@@ -10,6 +10,7 @@ export function Input(props) {
     id,
     name,
     value,
+    onChange,
     search = false,
     required = false,
   } = props;
@@ -28,6 +29,7 @@ export function Input(props) {
         id={id}
         name={name}
         value={value}
+        onChange={onChange}
         required={required}
       />
       {search && <Search className="search" />}

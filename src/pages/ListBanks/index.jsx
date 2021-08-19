@@ -1,8 +1,30 @@
-import { Sidebar, Header, Input, Cardbank } from "../../components";
+import { useEffect, useState } from "react";
+import { Sidebar, Header, Input, Cardbank, Loading } from "../../components";
+
+import { getDataBank } from "../../services/banksService";
 
 import "./style.scss";
 
 export function ListBanks() {
+  const [dataBanks, setDataBanks] = useState([]);
+  const [nameBank, setNameBank] = useState("");
+
+  useEffect(() => {
+    async function handleBankData() {
+      const dataBanksList = await getDataBank();
+
+      setDataBanks(dataBanksList);
+    }
+
+    handleBankData();
+  }, []);
+
+  const banksLowerCase = nameBank.toLowerCase();
+
+  const bankFiltered = dataBanks.filter((data) =>
+    data.fullName.toLowerCase().includes(banksLowerCase)
+  );
+
   return (
     <main className="container_banks">
       <Sidebar />
@@ -12,7 +34,7 @@ export function ListBanks() {
         <div className="banks_list-header">
           <div className="bank_list-amount">
             <h4>Bancos</h4>
-            <span>200 bancos</span>
+            <span>{bankFiltered.length} bancos</span>
           </div>
 
           <Input
@@ -20,46 +42,18 @@ export function ListBanks() {
             placeholder="Digite o nome do banco"
             type="text"
             search={true}
+            value={nameBank}
+            onChange={(event) => setNameBank(event.target.value)}
           />
         </div>
         <div className="container_list-banks">
-          <Cardbank/>
-          <Cardbank/>
-          <Cardbank/>
-          <Cardbank/>
-          <Cardbank/>
-          <Cardbank/>
-          <Cardbank/>
-          <Cardbank/>
-          <Cardbank/>
-          <Cardbank/>
-          <Cardbank/>
-          <Cardbank/>
-          <Cardbank/>
-          <Cardbank/>
-          <Cardbank/>
-          <Cardbank/>
-          <Cardbank/>
-          <Cardbank/>
-          <Cardbank/>
-          <Cardbank/>
-          <Cardbank/>
-          <Cardbank/>
-          <Cardbank/>
-          <Cardbank/>
-          <Cardbank/>
-          <Cardbank/>
-          <Cardbank/>
-          <Cardbank/>
-          <Cardbank/>
-          <Cardbank/>
-          <Cardbank/>
-          <Cardbank/>
-          <Cardbank/>
-          <Cardbank/>
-          <Cardbank/>
-          <Cardbank/>
-          <Cardbank/>
+          {dataBanks.length > 0 ? (
+            bankFiltered.map((data) => {
+              return <Cardbank key={data.ispb} data={data} />;
+            })
+          ) : (
+            <Loading />
+          )}
         </div>
       </section>
     </main>

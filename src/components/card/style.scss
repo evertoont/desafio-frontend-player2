@@ -6,6 +6,11 @@
   max-width: 300px;
   max-height: 120px;
   cursor: pointer;
+
+  &.disable{
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
   
   .card_header {
     display: flex;
@@ -37,18 +42,24 @@
   .card_content {
     display: flex;
     align-items: center;
-    margin-top: 16px;
-    justify-content: space-around;
-
+    margin-top: 16px; 
+    
     .card_megaphone {
       background: #E4F5EB;
       padding: 11px;
       box-sizing: content-box;
       border-radius: 30px;
+      margin-right: 12px;
 
       path {
         stroke: #0ec3a3;
       }
+    }
+
+    .info_bank{
+      color: #3B3F49;
+      font-size: 14px;
+      font-weight: 500;
     }
   }
 }
