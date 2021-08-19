@@ -6,7 +6,7 @@
   background: linear-gradient(0deg, #0ea4c2 0%, #13cfb9 100%);
   padding-bottom: 60px;
   transition: 0.3s;
-  position: relative;
+  position: fixed;
 
   p,
   h2,
@@ -17,6 +17,7 @@
 
   &:hover {
     width: 15rem;
+    z-index: 3;
 
     p,
     h2,

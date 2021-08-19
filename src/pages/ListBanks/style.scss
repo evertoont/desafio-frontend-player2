@@ -1,0 +1,14 @@
+.container_banks {
+  display: flex;
+  background-color: #F7F7F8;
+  min-height: 100vh;
+
+  .content_banks {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2.8rem;
+    background-color: #F7F7F8;
+    padding: 0 20px;
+    width: 100%;
+  }
+}
