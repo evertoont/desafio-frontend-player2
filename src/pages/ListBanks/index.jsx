@@ -1,4 +1,4 @@
-import { Sidebar, Header, Input } from "../../components";
+import { Sidebar, Header, Input, Cardbank } from "../../components";
 
 import "./style.scss";
 
@@ -23,7 +23,43 @@ export function ListBanks() {
           />
         </div>
         <div className="container_list-banks">
-          
+          <Cardbank/>
+          <Cardbank/>
+          <Cardbank/>
+          <Cardbank/>
+          <Cardbank/>
+          <Cardbank/>
+          <Cardbank/>
+          <Cardbank/>
+          <Cardbank/>
+          <Cardbank/>
+          <Cardbank/>
+          <Cardbank/>
+          <Cardbank/>
+          <Cardbank/>
+          <Cardbank/>
+          <Cardbank/>
+          <Cardbank/>
+          <Cardbank/>
+          <Cardbank/>
+          <Cardbank/>
+          <Cardbank/>
+          <Cardbank/>
+          <Cardbank/>
+          <Cardbank/>
+          <Cardbank/>
+          <Cardbank/>
+          <Cardbank/>
+          <Cardbank/>
+          <Cardbank/>
+          <Cardbank/>
+          <Cardbank/>
+          <Cardbank/>
+          <Cardbank/>
+          <Cardbank/>
+          <Cardbank/>
+          <Cardbank/>
+          <Cardbank/>
         </div>
       </section>
     </main>

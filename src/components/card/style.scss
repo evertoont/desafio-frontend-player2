@@ -1,0 +1,54 @@
+.container_card {
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0px 4px 20px rgba(71, 79, 99, 0.06);
+  padding: 12px 12px 24px;
+  max-width: 300px;
+  max-height: 120px;
+  cursor: pointer;
+  
+  .card_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .date_card {
+      color: #6e778d;
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+
+    .dots_card {
+      cursor: pointer;
+    }
+
+    .number_card {
+      color: #b3b9c9;
+      font-size: 0.87rem;
+    }
+
+    .users_card {
+      path {
+        stroke: #b3b9c9;
+      }
+    }
+  }
+
+  .card_content {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+    justify-content: space-around;
+
+    .card_megaphone {
+      background: #E4F5EB;
+      padding: 11px;
+      box-sizing: content-box;
+      border-radius: 30px;
+
+      path {
+        stroke: #0ec3a3;
+      }
+    }
+  }
+}

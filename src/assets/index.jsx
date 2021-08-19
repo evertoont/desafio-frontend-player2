@@ -10,6 +10,8 @@ import { ReactComponent as ArrowDown } from "./ArrowDown.svg";
 import { ReactComponent as ArrowLeft } from "./ArrowLeft.svg";
 import { ReactComponent as Notifications } from "./Notifications.svg";
 import { ReactComponent as Search } from "./Search.svg";
+import { ReactComponent as CheckCard } from "./CheckCard.svg";
+import { ReactComponent as DotsCard } from "./DotsCard.svg";
 
 export {
   Home,
@@ -23,5 +25,7 @@ export {
   Logo_Sidebar,
   Notifications,
   ArrowLeft,
-  Search
+  Search,
+  CheckCard,
+  DotsCard
 };
