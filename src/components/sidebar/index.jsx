@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
+import { store } from "../../auth/store";
 import {
   Home,
   Megaphone,
@@ -19,7 +20,9 @@ export function Sidebar() {
   const history = useHistory();
 
   function handleLogout() {
-    history.push("/");
+    store.dispatch({
+      type: "LOGOUT",
+    });
   }
 
   return (

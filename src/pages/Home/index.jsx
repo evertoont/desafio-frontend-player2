@@ -1,17 +1,34 @@
 import { useHistory } from "react-router-dom";
-
+import { encode as base64_encode } from "base-64";
 import { Logo, Image_aside } from "../../assets";
 import { Input, Button } from "../../components";
 
+import { store } from "../../auth/store";
+import moment from "moment";
+
 import "./style.scss";
+import { useEffect } from "react";
 
 export function Home() {
   const history = useHistory();
 
-  const handleBanksPage = (event) => {
+  useEffect(() => {
+    const login = localStorage.getItem("TOKEN_LOGIN");
+
+    if (login) {
+      history.push("/banks");
+    }
+  }, []);
+
+  const handleLogin = (event) => {
     event.preventDefault();
 
-    history.push("/banks");
+    const token = base64_encode(moment().format("LTS"));
+
+    store.dispatch({
+      type: "TOKEN_LOGIN",
+      playload: token,
+    });
   };
 
   return (
@@ -23,14 +40,14 @@ export function Home() {
             Dispare mensagens quando e para quem você quiser.
           </p>
 
-          <form className="home_form" onSubmit={handleBanksPage}>
+          <form className="home_form" onSubmit={handleLogin}>
             <Input
               type="email"
               placeholder="Digite seu e-mail"
               label="E-mail"
               id="email"
               name="email"
-              required={true}
+              // required={true}
             />
             <Input
               type="password"
@@ -38,7 +55,7 @@ export function Home() {
               label="Senha"
               name="senha"
               id="password"
-              required={true}
+              // required={true}
             />
             <Button type="submit">Entrar</Button>
 
