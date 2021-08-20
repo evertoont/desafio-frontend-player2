@@ -27,7 +27,7 @@
     }
 
     .home_logo {
-      max-width:6.75rem;
+      max-width: 6.75rem;
       margin-bottom: 48px;
       align-self: center;
     }
@@ -56,6 +56,10 @@
       line-height: 18px;
       text-align: center;
       padding: 5px;
+
+      @media screen and (max-width: 322px) {
+        display: none;
+      }
     }
   }
 
@@ -68,6 +72,10 @@
     align-items: center;
     padding: 126px 115px 153px;
     max-width: 50%;
+
+    @media screen and (max-width: 740px) {
+      display: none;
+    }
 
     color: #fff;
     text-align: center;

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Sidebar, Header, Input, Cardbank, Loading } from "../../components";
+import { Sidebar, Header, Input, Cardbank, Loading, SidebarMobile } from "../../components";
 
 import { getDataBank } from "../../services/banksService";
 
@@ -28,6 +28,7 @@ export function ListBanks() {
   return (
     <main className="container_banks">
       <Sidebar />
+      <SidebarMobile />
       <section className="content_banks">
         <Header title="Bancos" contentButton="+ Criar Banco" />
 

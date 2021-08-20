@@ -63,7 +63,6 @@ export function Home() {
               label="E-mail"
               id="email"
               name="email"
-              required={true}
               onChange={(event) =>
                 setDataForm({ ...dataForm, email: event.target.value })
               }
@@ -74,7 +73,6 @@ export function Home() {
               label="Senha"
               name="senha"
               id="password"
-              required={true}
               onChange={(event) =>
                 setDataForm({ ...dataForm, password: event.target.value })
               }

@@ -11,14 +11,39 @@
     padding: 0 20px;
     width: 100%;
 
+    @media screen and (max-width: 635px) {
+      margin-left: 1.5rem;
+    }
+
+    .button,
+    .header_info,
+    .arrow_header,
+    .header_notifications {
+      @media screen and (max-width: 635px) {
+        display: none;
+      }
+    }
+
     .banks_list-header {
       display: flex;
       justify-content: space-between;
       margin: 25px 100px 12px 0;
 
+      @media screen and (max-width: 635px) {
+        margin: 25px 0 12px 0;
+      }
+
+      @media screen and (max-width: 635px) {
+        flex-direction: column;
+      }
+
       .bank_list-amount {
         display: flex;
         align-items: center;
+
+        @media screen and (max-width: 635px) {
+          margin-bottom: 1rem;
+        }
 
         > h4 {
           margin-right: 0.75rem;
@@ -34,6 +59,10 @@
       .input_container {
         width: auto;
         min-width: 280px;
+
+        @media screen and (max-width: 635px) {
+          max-width: 300px;
+        }
 
         .bank_list-input {
           margin-left: auto;
@@ -58,6 +87,15 @@
 
     @media (max-width: 1020px) {
       grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media screen and (max-width: 765px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 635px) {
+      grid-template-columns: repeat(1, 1fr);
+      margin-right: 0;
     }
   }
 }

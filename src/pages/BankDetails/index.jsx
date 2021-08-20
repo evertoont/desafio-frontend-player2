@@ -1,4 +1,4 @@
-import { Sidebar, Header } from "../../components";
+import { Sidebar, Header, SidebarMobile } from "../../components";
 import { Pencil } from "../../assets";
 import mensagens from "../../mock/messagem.json";
 import { getInfoBank } from "../../services/banksService";
@@ -24,6 +24,7 @@ export function BankDetail() {
   return (
     <main className="container_banks">
       <Sidebar />
+      <SidebarMobile/>
       <section className="content_banks">
         <Header
           title={bankInfo.name}
