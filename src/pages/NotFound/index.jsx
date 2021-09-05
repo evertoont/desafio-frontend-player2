@@ -6,7 +6,7 @@ export function NotFound() {
   const history = useHistory();
 
   setTimeout(() => {
-    history.goBack()
+    history.push('/banks')
   }, 4000);
 
   return (

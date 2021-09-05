@@ -31,6 +31,6 @@ export const getInfoBank = async (code) => {
     return data
 
   } catch (error) {
-    console.log(error.message)
+    window.location = "/notfound"
   }
 }
