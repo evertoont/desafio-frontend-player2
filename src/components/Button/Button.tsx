@@ -5,7 +5,7 @@ import "./button.scss";
 
 //Interfaces
 interface buttonProps {
-  type?: any;
+  type?: "button" | "submit" | "reset";
   children?: React.ReactNode;
   onclick?: () => void;
   image?: any;

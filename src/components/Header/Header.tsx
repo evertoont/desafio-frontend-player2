@@ -17,7 +17,7 @@ import { Notifications, ArrowDown, ArrowLeft } from "../../assets";
 //Interfaces
 interface HeaderProps {
   title: string;
-  contentButton: any;
+  contentButton: string;
   buttonImage: any;
   showArrow: boolean;
 }

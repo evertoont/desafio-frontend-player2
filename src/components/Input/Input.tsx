@@ -14,13 +14,13 @@ import { Search } from "../../assets";
 
 //Interfaces
 interface InputProps {
-  label?: any;
-  type?: any;
-  placeholder?: any;
-  id?: any;
-  name?: any;
-  value?: any;
-  onChange: any;
+  label?: string;
+  type?: string;
+  placeholder?: string;
+  id?: string;
+  name?: string;
+  value?: string;
+  onChange: () => void;
   search?: Boolean;
   required: any;
 }

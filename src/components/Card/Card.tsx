@@ -15,7 +15,7 @@ import { Users, CheckCard, Megaphone, DotsCard } from "../../assets";
 
 //Interfaces
 interface CardProps {
-  code: any;
+  code: string;
   name: string;
   ispb: string;
 }
