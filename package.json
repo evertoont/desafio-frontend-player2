@@ -50,5 +50,9 @@
   "engines": {
     "npm": "Ops! Please use Yarn",
     "yarn": ">=1.20.0"
+  },
+  "devDependencies": {
+    "@types/react-router": "^5.1.18",
+    "@types/react-router-dom": "^5.3.3"
   }
 }

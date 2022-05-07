@@ -1,4 +1,4 @@
-.sidebar_mobile{
+.sidebar_mobile {
   display: none;
 
   @media screen and (max-width: 635px) {
@@ -11,6 +11,6 @@
     z-index: 3;
     height: 44px;
     width: 44px;
-    background: linear-gradient(0deg, #0EA4C2 0%, #13CFB9 100%);
+    background: linear-gradient(0deg, #0ea4c2 0%, #13cfb9 100%);
   }
 }

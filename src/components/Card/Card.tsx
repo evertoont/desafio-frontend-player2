@@ -1,15 +1,37 @@
+//GLOBAL - components from npm
 import moment from "moment";
 import { useHistory } from "react-router-dom";
+//STYLES
+import "./card.scss";
 
+//COMPONENTS
+
+//SERVICES - api, conectors...
+
+//GLOBAL STATE - redux, env...
+
+//ASSETS - icons, images...
 import { Users, CheckCard, Megaphone, DotsCard } from "../../assets";
 
-import "./style.scss";
+//Interfaces
+interface CardProps {
+  code: any;
+  name: string;
+  ispb: string;
+}
 
-export function Cardbank({ data }) {
+export default function Card({ code, name, ispb }: CardProps) {
+  //GENERAL
   const history = useHistory();
   const data_now = moment().format("DD/MM/YYYY - HH:mm");
 
-  let code = data.code
+  //STATES
+
+  //REDUX - Selectors
+
+  //USE EFFECTS
+
+  //FUNCTIONS
 
   function handlePageInfo() {
     history.push(`/bankdetail/${code}`);
@@ -17,8 +39,8 @@ export function Cardbank({ data }) {
 
   return (
     <div
-      className={data.code ? "container_card" : "container_card disable"}
-      onClick={code ? handlePageInfo : null}
+      className={code ? "container_card" : "container_card disable"}
+      onClick={code ? handlePageInfo : () => {}}
     >
       <div className="card_header">
         <CheckCard />
@@ -31,9 +53,9 @@ export function Cardbank({ data }) {
         <Megaphone className="card_megaphone" />
         <div className="info_bank">
           <p>
-            {data.name} - {data.code}
+            {name} - {code}
           </p>
-          <p>ISPB: {data.ispb} </p>
+          <p>ISPB: {ispb} </p>
         </div>
       </div>
     </div>

@@ -1,5 +1,12 @@
 import { useEffect, useState } from "react";
-import { Sidebar, Header, Input, Cardbank, Loading, SidebarMobile } from "../../components";
+import {
+  Sidebar,
+  Header,
+  Input,
+  Cardbank,
+  Loading,
+  SidebarMobile,
+} from "../../components";
 
 import { getDataBank } from "../../services/banksService";
 
@@ -50,7 +57,14 @@ export function ListBanks() {
         <div className="container_list-banks">
           {dataBanks.length > 0 ? (
             bankFiltered.map((data) => {
-              return <Cardbank key={data.ispb} data={data} />;
+              return (
+                <Cardbank
+                  key={data.ispb}
+                  code={data.code}
+                  ispb={data.ispb}
+                  name={data.name}
+                />
+              );
             })
           ) : (
             <Loading />

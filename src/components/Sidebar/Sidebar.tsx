@@ -1,6 +1,17 @@
+//GLOBAL - components from npm
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
+//STYLES
+import "./sidebar.scss";
+
+//COMPONENTS
+
+//SERVICES - api, conectors...
+
+//GLOBAL STATE - redux, env...
 import { store } from "../../auth/store";
+
+//ASSETS - icons, images...
 import {
   Home,
   Megaphone,
@@ -10,15 +21,21 @@ import {
   Logo_Sidebar,
   ArrowDown,
 } from "../../assets";
-import "./style.scss";
 
-export function Sidebar() {
+export default function Sidebar() {
+  //GENERAL
   const [openDisparos, setOpenDisparos] = useState(false);
   const [openGrupos, setOpenGrupos] = useState(false);
   const [openContatos, setOpenContatos] = useState(false);
-
   const history = useHistory();
 
+  //STATES
+
+  //REDUX - Selectors
+
+  //USE EFFECTS
+
+  //FUNCTIONS
   function handleLogout() {
     store.dispatch({
       type: "LOGOUT",
