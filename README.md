@@ -22,7 +22,7 @@ Desafio front-end Player 2 </h1>
 
 ## :pushpin: Sobre
 
-Desafio Frontend da Player2
+Desafio Frontend Jr da Player2.tech
 
 #### Acesse a demo:
 
